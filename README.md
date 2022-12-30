@@ -28,7 +28,8 @@ and it has only been tested under Linux and MacOS.
 
 ## Tests
 Tests exist in the `tests` module. To run them, cd to the root of the repo and
-run `cargo test`.
+run `cargo test --lib`. Note that the current tests exist to test the library
+portion of this crate.
 
 ## Documentation
 Documentation can be generated from the doc comments by running `cargo doc --open`

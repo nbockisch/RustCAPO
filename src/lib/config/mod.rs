@@ -1,3 +1,3 @@
-//! This module is intended to handle CAPO configuration functionality
+//! This module handles CAPO configuration functionality
 pub mod config;
 mod config_file;
