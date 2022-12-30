@@ -1,10 +1,11 @@
 use clap::Parser;
-use helpers::errors;
-use config::config::CapoConfig;
 
-mod helpers;
-mod config;
-mod tests;
+use rustcapo::{
+    CapoConfig,
+    errors,
+};
+// use helpers::errors;
+// use config::config::CapoConfig;
 
 /// Arguments to read CAPO properties
 #[derive(Parser, Debug)]

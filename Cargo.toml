@@ -7,7 +7,9 @@ license = "GPL-3.0+"
 readme = "README.md"
 description = "A Rust implementation of SSA CAPO (CASA, Archive, and Pipeline Options)"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "rustcapo"
+path = "src/lib/lib.rs"
 
 [dependencies]
 clap = { version = "4.0", features = ["derive"] }

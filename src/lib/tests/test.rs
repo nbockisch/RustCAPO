@@ -1,15 +1,17 @@
+#[allow(unused_imports)]
 use std::collections::HashMap;
+#[allow(unused_imports)]
 use crate::config::config;
 
 #[test]
 fn initialize_config() {
-    let _config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let _config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 }
 
 #[test]
 fn test_string_retrieval() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected = String::from("user");
@@ -19,7 +21,7 @@ fn test_string_retrieval() {
 
 #[test]
 fn test_u128_retrieval() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected: u128 = 100;
@@ -29,7 +31,7 @@ fn test_u128_retrieval() {
 
 #[test]
 fn test_i128_retrieval() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected: i128 = 100;
@@ -39,7 +41,7 @@ fn test_i128_retrieval() {
 
 #[test]
 fn test_u64_retrieval() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected: u64 = 100;
@@ -49,7 +51,7 @@ fn test_u64_retrieval() {
 
 #[test]
 fn test_i64_retrieval() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected: i64 = 100;
@@ -59,7 +61,7 @@ fn test_i64_retrieval() {
 
 #[test]
 fn test_u32_retrieval() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected: u32 = 100;
@@ -69,7 +71,7 @@ fn test_u32_retrieval() {
 
 #[test]
 fn test_i32_retrieval() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected: i32 = 100;
@@ -79,7 +81,7 @@ fn test_i32_retrieval() {
 
 #[test]
 fn test_u16_retrieval() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected: u16 = 100;
@@ -89,7 +91,7 @@ fn test_u16_retrieval() {
 
 #[test]
 fn test_i16_retrieval() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected: i16 = 100;
@@ -99,7 +101,7 @@ fn test_i16_retrieval() {
 
 #[test]
 fn test_u8_retrieval() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected: u8 = 100;
@@ -109,7 +111,7 @@ fn test_u8_retrieval() {
 
 #[test]
 fn test_i8_retrieval() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected: i8 = 100;
@@ -119,7 +121,7 @@ fn test_i8_retrieval() {
 
 #[test]
 fn test_f64_retrieval() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected: f64 = 3.1415;
@@ -129,7 +131,7 @@ fn test_f64_retrieval() {
 
 #[test]
 fn test_f32_retrieval() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected: f32 = 3.1415;
@@ -139,7 +141,7 @@ fn test_f32_retrieval() {
 
 #[test]
 fn test_usize_retrieval() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected: usize = 100;
@@ -149,7 +151,7 @@ fn test_usize_retrieval() {
 
 #[test]
 fn test_isize_retrieval() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected: isize = 100;
@@ -159,7 +161,7 @@ fn test_isize_retrieval() {
 
 #[test]
 fn test_bool_retrieval() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected: bool = true;
@@ -169,7 +171,7 @@ fn test_bool_retrieval() {
 
 #[test]
 fn test_all_options() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected = HashMap::from([
@@ -198,7 +200,7 @@ fn test_all_options() {
 
 #[test]
 fn test_location_retrieval() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected = String::from("test.properties");
@@ -208,7 +210,7 @@ fn test_location_retrieval() {
 
 #[test]
 fn test_all_locations() {
-    let config = config::CapoConfig::new(Some("test"), Some("src/tests"))
+    let config = config::CapoConfig::new(Some("test"), Some("src/lib/tests"))
         .unwrap();
 
     let expected_location = String::from("test.properties");
