@@ -26,6 +26,44 @@ will complain and die (this is also intentional).
 CAPO isn't yet robust against things like profiles with spaces in their name,
 and it has only been tested under Linux and MacOS.
 
+## Usage
+### As a library
+Library documentation can be generated from the doc comments. See the [Documentation](#Documentation)
+section for more on this.
+
+### As a binary
+The binary provides the following options listed in its help message:
+
+```
+A Rust implementation of SSA CAPO (CASA, Archive, and Pipeline Options)
+
+Usage: rustcapo [OPTIONS]
+
+Options:
+      --path <PATH>          Path of directories to search
+  -A, --all                  Display all settings
+  -q, --quiet                quiet mode; only display the value
+      --settings <SETTINGS>  one or more settings to query, ignored if -A
+  -P, --profile <PROFILE>    profile name to use, e.g. test, production
+  -h, --help                 Print help information
+  -V, --version              Print version information
+```
+
+## Building
+### As a library
+Within the `dependencies` section of your `Cargo.toml` file, add the following:
+
+`rustcapo = { git = "https://gitlab.nrao.edu/nbockisc/RustCAPO" }`
+
+Then build the project to import and build the library for use.
+
+### As a static binary
+From within the repo on a Linux machine, run:
+
+`RUSTFLAGS='-C target-feature=+crt-static' cargo build --release --target x86_64-unknown-linux-gnu`
+
+This will create a static binary in `target/x86_64-unknown-linux-gnu/release/rustcapo`
+
 ## Tests
 Tests exist in the `tests` module. To run them, cd to the root of the repo and
 run `cargo test --lib`. Note that the current tests exist to test the library
@@ -33,8 +71,8 @@ portion of this crate.
 
 ## Documentation
 Documentation can be generated from the doc comments by running `cargo doc --open`
-from within the repo. This will generate HTML documentation that will open in a
-web browser.
+from within the repo. This will generate HTML documentation for the library that
+will open in a web browser.
 
 ## License
 You should have received a copy of the GNU General Public License
